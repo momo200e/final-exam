@@ -88,7 +88,7 @@ rails g scaffold student name student_id:integer grade: integer
 用`<div class="container">`包著內文
 
 **表格美化**
-```rails
+```ruby
 #student/index.html.erb
 <h1>成績列表</h1>
 <%= link_to '新增學生', new_student_path, class="" %>
