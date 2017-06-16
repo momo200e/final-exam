@@ -6,8 +6,12 @@
   - variable：在變數命名規則上，通常會使用英文字母、數字或底線的組合，或是非英文字也可以，如日文。
 
 2. 請問 `hash[:key]` 跟 `hash["hash"]` 有什麼差別?
+- hash["hash"]會得到空
+- hash[:key]才能正確拿到值
 3. 如果要在 1 到 100 的數字當中，任意取出 5 個不重複的亂數，你會怎麼做？
+- puts [1..100].to_a.sample(5)
 4. 試說明在 Ruby 裡 `public`、`protected` 與 `private` method 的差別。
+- public就是在所有地方都可以直接存取，private是只有在類別內部才可以存取；而protected差不多是在這兩者之間。
 
 ### Rails 題
 
@@ -20,8 +24,17 @@
 - [Awesome_print](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#awesome_print)：awesome_print是一個可以將Ruby的console輸出排版好看一點的外掛，因為我常常用到console來練習，所以排版很重要，不然會瞎掉XDD
  
 2. 請問 `User.find_by(id: 1)` 跟 `User.find(1)` 這兩個寫法有什麼差別?
+
+- User.find(1)    # 有的話會傳回User.id=1的物件,無的話會噴錯
+
+- User.find_by(id: 1) #有的話會傳回User.id=1的物件,無的話會傳nil
+
 3. Gemfile 裡 `gem 'sass-rails', '~> 4.0.3'` ，後面的 `"~> 4.0.3"` 是代表什麼意思?
+- 版本問題，如果沒打，那`bundle install`就會幫你妝最穩的版本
 4. 請簡述什麼是 N+1 問題? 又該怎麼解決它?
+- 意思是我們在迴圈當中大量`select x`查詢N筆資料，再加上開頭查詢的那1筆，稱為N+1。
+**這樣非常的多於浪費，身為後端開發者，查詢資料庫的次數是越少越好。**
+- 解決：includes 可以直接將相關連的資料，在同一筆查詢，一起撈出來
 
 ### Git 題
 
