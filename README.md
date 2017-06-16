@@ -64,9 +64,9 @@ gem 'simple_form'
 //= require bootstrap
 ``` 
 因為要搭配bootstrap使用，所以使用`rails generate simple_form:install --bootstrap`
-    
+    
+記得重開rails server唷 ~~~~
 
-  
 這樣就完成導入囉~
   
 ### Step.3 scaffold建立studentCRUD
