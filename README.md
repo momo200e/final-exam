@@ -134,3 +134,5 @@ rails g scaffold student name student_id:integer grade:integer
  <td><%= link_to '編輯', edit_student_path(student), class:"btn btn-primary"  %></td>
  <td><%= link_to '刪除', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-dange
 ```
+
+**老師還有把scaffold長出來的SCSS砍掉，其中bootstrap中的字體改微軟正黑體，時間關係，這不再此做過多說明**
