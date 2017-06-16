@@ -44,8 +44,7 @@
     - 空的目錄無法被提交，可以加個檔案再上船，可以加個`.keep`
 2. 在 Rails 專案中，`/config/database.yml` 這個檔案裡有資料庫的設定、帳號密碼等資訊，在使用 Git 時，你通常會怎麼處理這類型內容比較敏感的檔案?
     - 打開根目錄的 .gitignore ，輸入
-    ```ruby
-        /config/database.yml
-    ```
+    
+    `/config/database.yml`
     為了安全，這個設定會將 config/database.yml 從版本控制中移除
     
