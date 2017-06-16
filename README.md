@@ -72,7 +72,7 @@ gem 'simple_form'
 ### Step.3 scaffold建立studentCRUD
 
 ```ruby
-rails g scaffold student name student_id:integer grade: integer
+rails g scaffold student name student_id:integer grade:integer
 ```
 `rails db:migrate`
 
