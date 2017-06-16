@@ -152,3 +152,53 @@ rails g scaffold student name student_id:integer grade:integer
 <hr>
 <P>分數級別說明：90分以上S/80~89：A/70~79：B/60~69：C級/未滿60：D級</P>
 ```
+
+**接下來 我們要用龍哥教我們的Rails 程式碼整理術**
+顯示的這部份不建議直接寫在view，要寫在Helper
+```ruby
+# 檔案：app/helpers/students_helper.rb
+def print_grade(student)
+      if student.grade.to_i >= 90
+        "S級(#{student.grade})"
+      elsif student.grade >= 80 && student.grade < 90
+        "A級(#{student.grade})"
+     
+      elsif student.grade >= 70 && student.grade < 80
+        "B級(#{student.grade})"
+     
+      elsif student.grade >= 60 && student.grade < 70
+        "C級(#{student.grade})"
+
+      else
+        "D級(#{student.grade})"
+      end
+      
+  end
+```
+這邊會有一些小問題，會說找不到方法。。。
+如果把=拿掉又會正常
+```ruby
+def print_grade(student)
+   if student.grade.to_i > 90
+        "S級(#{student.grade})"
+      elsif student.grade > 80 
+        "A級(#{student.grade})"
+     
+      elsif student.grade > 70 
+        "B級(#{student.grade})"
+     
+      elsif student.grade > 60 
+        "C級(#{student.grade})"
+
+      else
+        "D級(#{student.grade})"
+      end
+end
+```
+我可能還需要時間找一下
+
+那原本的地方，要改這樣
+```ruby
+#student/index.html.erb
+<td><%= print_grade(student) %></td>
+```
