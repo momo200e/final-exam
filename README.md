@@ -113,9 +113,8 @@ rails g scaffold student name student_id:integer grade:integer
         <td><%= student.name %></td>
         <td><%= student.student_id %></td>
         <td><%= student.grade %></td>
-        <td><%= student.integer %></td>
-        <td><%= link_to '編輯', edit_student_path(student) %></td>
-        <td><%= link_to '刪除', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編輯', edit_student_path(student), class:"btn btn-primary"  %></td>
+        <td><%= link_to '刪除', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -123,16 +122,15 @@ rails g scaffold student name student_id:integer grade:integer
 
 <br>
 
-
 ```
 **按鈕美化**
 - 綠色按鈕加上`class="btn btn-success"`
 - 藍色按鈕加上`class="btn btn-primary"`
 - 紅色按鈕加上`class="btn btn-danger"`
+
+**依老師題目來說按鈕是小按鈕btn-xs**
 ```ruby
 #layouts/application.html.erb
-<div class="container">
-<%= yield %>  
-</div>
+ <td><%= link_to '編輯', edit_student_path(student), class:"btn btn-primary"  %></td>
+ <td><%= link_to '刪除', student, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-dange
 ```
-用`<div class="container">`包著內文
