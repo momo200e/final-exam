@@ -92,7 +92,9 @@ rails g scaffold student name student_id:integer grade:integer
 ```ruby
 #student/index.html.erb
 <h1>成績列表</h1>
-<%= link_to '新增學生', new_student_path, class="btn btn-success" %>
+
+<%= link_to '新增學生', new_student_path, class:"btn btn-success"  %>
+
 
 <table class="table">
   <thead>
