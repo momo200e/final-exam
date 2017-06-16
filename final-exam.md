@@ -12,9 +12,13 @@
 ### Rails 題
 
 1. 請任意舉出三個你在開發 Rails 專案時常用到的 gem，並說明你覺得這些 gem 厲害的地方或是你為什麼採用它們的原因。
-  - [Bootstrap-sass](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#bootstrap-sass)：這個框架是我開發php網站最常用，也是最容易用的，方常方便
-  - [Devise會員機制](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#devise會員機制)：這個框架是我學RAILS以來其中幾個最讓我驚訝的GEM，有了Devise，實作使用者機制變成一件再容易不過的事，馬上可以長出登入登出，如果再搭配cancancan那就太狂了XD
- - [Awesome_print](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#awesome_print)：awesome_print是一個可以將Ruby的console輸出排版好看一點的外掛，因為我常常用到console來練習，所以排版很重要，不然會瞎掉XDD
+
+- [Bootstrap-sass](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#bootstrap-sass)：這個框架是我開發php網站最常用，也是最容易用的，方常方便
+  
+- [Devise會員機制](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#devise會員機制)：這個框架是我學RAILS以來其中幾個最讓我驚訝的GEM，有了Devise，實作使用者機制變成一件再容易不過的事，馬上可以長出登入登出，如果再搭配cancancan那就太狂了XD
+  
+- [Awesome_print](https://github.com/momo200e/Ruby_Rails_Notes/blob/master/Gem_Notes.md#awesome_print)：awesome_print是一個可以將Ruby的console輸出排版好看一點的外掛，因為我常常用到console來練習，所以排版很重要，不然會瞎掉XDD
+ 
 2. 請問 `User.find_by(id: 1)` 跟 `User.find(1)` 這兩個寫法有什麼差別?
 3. Gemfile 裡 `gem 'sass-rails', '~> 4.0.3'` ，後面的 `"~> 4.0.3"` 是代表什麼意思?
 4. 請簡述什麼是 N+1 問題? 又該怎麼解決它?
