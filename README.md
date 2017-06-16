@@ -178,6 +178,7 @@ def print_grade(student)
 這邊會有一些小問題，會說找不到方法。。。
 如果把=拿掉又會正常
 ```ruby
+# 檔案：app/helpers/students_helper.rb
 def print_grade(student)
    if student.grade.to_i > 90
         "S級(#{student.grade})"
@@ -202,3 +203,32 @@ end
 #student/index.html.erb
 <td><%= print_grade(student) %></td>
 ```
+--------------------------------------------
+如果寫在Model也會有這個問題~
+```ruby
+#student/index.html.erb
+def show_grade
+      if grade >= 90
+        "S級(#{grade})"
+      elsif grade > 80  && student.grade < 90
+        "A級(#{grade})"
+     
+      elsif grade > 70  && student.grade < 80
+        "B級(#{grade})"
+     
+      elsif grade > 60  && student.grade < 70
+        "C級(#{grade})"
+
+      else
+        "D級(#{grade})"
+      end
+      
+  end
+```
+那原本的地方，要改這樣
+```ruby
+#student/index.html.erb
+<td><%= show_grade %></td>
+```
+
+#**解決方法：邏輯判斷的縮排全部`tab`調整過一次就好了！！！！！具體原因不明OTL搞好久**
