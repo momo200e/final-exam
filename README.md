@@ -124,9 +124,9 @@ rails g scaffold student name student_id:integer grade:integer
 
 ```
 **按鈕美化**
-綠色按鈕加上`class="btn btn-success"`
-藍色按鈕加上`class="btn btn-primary"`
-紅色按鈕加上`class="btn btn-danger"`
+- 綠色按鈕加上`class="btn btn-success"`
+- 藍色按鈕加上`class="btn btn-primary"`
+- 紅色按鈕加上`class="btn btn-danger"`
 ```ruby
 #layouts/application.html.erb
 <div class="container">
