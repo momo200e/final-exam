@@ -71,7 +71,7 @@ gem 'simple_form'
   
 ### Step.3 scaffold建立studentCRUD
 
-```rails
+```ruby
 rails g scaffold student name student_id:integer grade: integer
 ```
 `rails db:migrate`
@@ -79,7 +79,7 @@ rails g scaffold student name student_id:integer grade: integer
 
 ### Step.4 畫面美化
 **畫面內容**
-```rails
+```ruby
 #layouts/application.html.erb
 <div class="container">
 <%= yield %>  
