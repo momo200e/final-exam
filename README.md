@@ -11,6 +11,8 @@
   - [Step.3 scaffold建立CRUD](#step3-scaffold建立studentcrud)
   
   - [Step.4 畫面美化](#step4-畫面美化)
+  
+  - [Step.5 顯示等第](#step5-顯示等第)
  
 
 ## 系統功能(頁面)
@@ -124,9 +126,9 @@ rails g scaffold student name student_id:integer grade:integer
 
 ```
 **按鈕美化**
-- 綠色按鈕加上`class="btn btn-success"`
-- 藍色按鈕加上`class="btn btn-primary"`
-- 紅色按鈕加上`class="btn btn-danger"`
+- 綠色按鈕加上`class:"btn btn-success"`
+- 藍色按鈕加上`class:"btn btn-primary"`
+- 紅色按鈕加上`class:"btn btn-danger"`
 
 **依老師題目來說按鈕是小按鈕btn-xs**
 ```ruby
@@ -136,3 +138,14 @@ rails g scaffold student name student_id:integer grade:integer
 ```
 
 **老師還有把scaffold長出來的SCSS砍掉，其中bootstrap中的字體改微軟正黑體，時間關係，這不再此做過多說明**
+
+### Step.5 成績等第
+**畫面內容**
+```ruby
+#layouts/application.html.erb
+<div class="container">
+<%= yield %>  
+</div>
+```
+用`<div class="container">`包著內文
+
