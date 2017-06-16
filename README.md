@@ -5,9 +5,12 @@
 - [技術運用(Gem)](#技術運用gem)
 - [實作](#開始實作)
   - [Step.1 建立專案](#step1-建立my_store專案)
+  
   - [Step.2 加入gem套件](#step2-加入gem套件)
-  - [Step.3 scaffold建立CRUD](#step3-scaffold建立studentcrud)
-  - [Step.4 畫面美化](#step4-畫面美化)
+  
+  - [Step.3 scaffold建立CRUD](#step3-scaffold建立studentcrud)
+  
+  - [Step.4 畫面美化](#step4-畫面美化)
  
 
 ## 系統功能(頁面)
