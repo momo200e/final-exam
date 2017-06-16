@@ -12,7 +12,7 @@
   
   - [Step.4 畫面美化](#step4-畫面美化)
 
-  - [Step.5 顯示等第](#step5-顯示等第)
+  - [Step.5 顯示等第](#step5-成績等第)
  
 
 ## 系統功能(頁面)
@@ -146,4 +146,9 @@ rails g scaffold student name student_id:integer grade:integer
 <hr>
 <P>分數級別說明：90分以上S/80~89：A/70~79：B/60~69：C級/未滿60：D級</P>
 ```
-
+**MODEL**
+```ruby
+#student.rb
+<hr>
+<P>分數級別說明：90分以上S/80~89：A/70~79：B/60~69：C級/未滿60：D級</P>
+```
