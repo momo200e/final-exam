@@ -78,4 +78,47 @@ rails g scaffold student name student_id:integer grade: integer
 
 
 ### Step.4 畫面美化
-未完待續。。。
+**畫面內容**
+```rails
+#layouts/application.html.erb
+<div class="container">
+<%= yield %>  
+</div>
+```
+用`<div class="container">`包著內文
+
+**表格美化**
+```rails
+#student/index.html.erb
+<h1>成績列表</h1>
+<%= link_to '新增學生', new_student_path, class="" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>學號</th>
+      <th>分數</th>
+      <th>處理</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.student_id %></td>
+        <td><%= student.grade %></td>
+        <td><%= student.integer %></td>
+        <td><%= link_to '編輯', edit_student_path(student) %></td>
+        <td><%= link_to '刪除', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+```
