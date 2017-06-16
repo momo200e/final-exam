@@ -232,3 +232,4 @@ def show_grade
 ```
 
 #**解決方法：邏輯判斷的縮排全部`tab`調整過一次就好了！！！！！具體原因不明OTL搞好久**
+![圖片1](https://github.com/momo200e/final-exam/blob/master/11.jpg)
