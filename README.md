@@ -11,8 +11,8 @@
   - [Step.3 scaffold建立CRUD](#step3-scaffold建立studentcrud)
   
   - [Step.4 畫面美化](#step4-畫面美化)
-  
-  - [Step.5 顯示等第](#step5-顯示等第)
+
+  - [Step.5 顯示等第](#step5-顯示等第)
  
 
 ## 系統功能(頁面)
@@ -142,10 +142,8 @@ rails g scaffold student name student_id:integer grade:integer
 ### Step.5 成績等第
 **畫面內容**
 ```ruby
-#layouts/application.html.erb
-<div class="container">
-<%= yield %>  
-</div>
+#student/index.html.erb
+<hr>
+<P>分數級別說明：90分以上S/80~89：A/70~79：B/60~69：C級/未滿60：D級</P>
 ```
-用`<div class="container">`包著內文
 
