@@ -74,6 +74,7 @@ gem 'simple_form'
 ```rails
 rails g scaffold student name student_id:integer grade: integer
 ```
+`rails db:migrate`
 
 
 ### Step.4 畫面美化
